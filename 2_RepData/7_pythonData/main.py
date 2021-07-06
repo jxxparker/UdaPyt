@@ -1,3 +1,3 @@
 #objects and names
 
-#testing
+print(isinstance(4, object) )
