@@ -10,3 +10,6 @@ def find_anagrams(letters, words):
     # Search the lookup table for the queried letters.
     search = ''.join((sorted(letters)))
     return lookup.get(search, set())
+
+
+    
