@@ -10,8 +10,7 @@ def prime_checker(number):
             print(f"{number} not a prime number")
 
 
-
-
+# sdfasd
 #Write your code above this line 👆
     
 #Do NOT change any of the code below👇
