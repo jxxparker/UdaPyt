@@ -1,11 +1,7 @@
-#super simple fxn
-def greet():
-    print("hello ghoney")
+#functions with more than 1 input
 
-greet()
+def greet_with(name, location):
+    print(f"Hello {name}")
+    print(f"what is it like in {location}")
 
-#fxn that allows for input
-def greet_with_name(name):
-    print(f"hello {name}")
-
-greet_with_name("jihun")
+greet_with(name="jihun", location="california")
