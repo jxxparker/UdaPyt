@@ -16,10 +16,9 @@ computer_cards = []
 for _ in range(2):
     user_cards.append(deal_card())
     computer_cards.append(deal_card())
-    
-#Hint 6: Create a function called calculate_score() that takes a List of cards as input 
-#and returns the score. Look up the sum() function to help you do this.
-def calculate_score():
+    #Hint 6: Create a function called calculate_score() that takes a List of cards as input and returns the score. Look up the sum() function to help you do this.
+
+def calculate_score(set_cards):
     #Hint 7: Inside calculate_score() check for a blackjack (a hand with only 2 cards: ace + 10) and return 0 instead of the actual score. 0 will represent a blackjack in our game.
     if sum(set_cards) == 21 and len(set_cards) == 2:
         return 0 #black jack completed
@@ -30,9 +29,6 @@ def calculate_score():
         set_cards.append(1)
 
     return sum(set_cards)
-
-
-
 
 
 #Hint 9: Call calculate_score(). If the computer or the user has a blackjack (0) or if the user's score is over 21, then the game ends.

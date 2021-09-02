@@ -1,68 +1,47 @@
-############### Blackjack Project #####################
+set_cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
-#Difficulty Normal 😎: Use all Hints below to complete the project.
-#Difficulty Hard 🤔: Use only Hints 1, 2, 3 to complete the project.
-#Difficulty Extra Hard 😭: Only use Hints 1 & 2 to complete the project.
-#Difficulty Expert 🤯: Only use Hint 1 to complete the project.
-
-############### Our Blackjack House Rules #####################
-
-## The deck is unlimited in size. 
-## There are no jokers. 
-## The Jack/Queen/King all count as 10.
-## The the Ace can count as 11 or 1.
-## Use the following list as the deck of cards:
-cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-## The cards in the list have equal probability of being drawn.
-## Cards are not removed from the deck as they are drawn.
-## The computer is the dealer.
-
-##################### Hints #####################
-
-#Hint 1: Go to this website and try out the Blackjack game: 
-#   https://games.washingtonpost.com/games/blackjack/
-#Then try out the completed Blackjack project here: 
-#   http://blackjack-final.appbrewery.repl.run
-
-#Hint 2: Read this breakdown of program requirements: 
-#   http://listmoz.com/view/6h34DJpvJBFVRlZfJvxF
-#Then try to create your own flowchart for the program.
-
-#Hint 3: Download and read this flow chart I've created: 
-#   https://drive.google.com/uc?export=download&id=1rDkiHCrhaf9eX7u7yjM1qwSuyEk-rPnt
-
-#Hint 4: Create a deal_card() function that uses the List below to *return* a random card.
-#11 is the Ace.
+#Hint 4: Create a deal_card() function that uses the List below to *return* a random card. 11 is the Ace.
 import random
 
 def deal_card():
     """returns a random card from the deck"""
-    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-    card = random.choice(cards)
+    set_cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+    card = random.choice(set_cards)
     return card
 
-def calculate_score(cards):
-    """take a list of cards and return the score calculated from the cards"""
-    if 11 in cards and 10 in cards and len(cards) > 21:
-        cards.remove(11)
-        cards.append(1)
+#Hint 6: Create a function called calculate_score() that takes a List of cards as input and returns the score. Look up the sum() function to help you do this.
+def calculate_score(set_cards):
+    """take a list of set_cards and return the score calculated from the set_cards"""
+    #Hint 7: Inside calculate_score() check for a blackjack (a hand with only 2 cards: ace + 10) and return 0 instead of the actual score. 0 will represent a blackjack in our game.
+    if sum(set_cards) == 21 and len(set_cards) == 2:
+        return 0 #black jack completed
 
-    return sum(cards)
+    #Hint 8: Inside calculate_score() check for an 11 (ace). If the score is already over 21, remove the 11 and replace it with a 1. You might need to look up append() and remove().\
+    if 11 in set_cards and sum(set_cards) > 21:
+        set_cards.remove(11)
+        set_cards.append(1)
+
+    return sum(set_cards)
 
 #Hint 5: Deal the user and computer 2 cards each using deal_card() and append().
 user_cards = []
 computer_cards = []
+is_game_over = False 
 
-for _ in range(2): #use _ because we don't need a variable really
-    # new_card = deal_card() #deal cards through the for loop
-    # user_cards.append(new_card)
+for _ in range(2):
     user_cards.append(deal_card())
     computer_cards.append(deal_card())
+    
+#Hint 9: Call calculate_score(). If the computer or the user has a blackjack (0) or if the user's score is over 21, then the game ends.
 
 user_score = calculate_score(user_cards)
 computer_score = calculate_score(computer_cards)
+print(f" your cards: {user_cards}, current score: {user_score} ")
+print(f" computer's first card: {computer_cards[0]}")
 
-#Hint 9: Call calculate_score(). If the computer or the user has a blackjack (0) or if the user's score is over 21, then the game ends.
+if user_score == 0 or computer_score == 0 or user_score > 21:
+    is_game_over = True
+
 
 
 #Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
