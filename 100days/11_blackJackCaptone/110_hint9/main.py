@@ -12,7 +12,7 @@
 ## The Jack/Queen/King all count as 10.
 ## The the Ace can count as 11 or 1.
 ## Use the following list as the deck of cards:
-set_cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 ## The cards in the list have equal probability of being drawn.
 ## Cards are not removed from the deck as they are drawn.
 ## The computer is the dealer.
@@ -31,32 +31,39 @@ set_cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 #Hint 3: Download and read this flow chart I've created: 
 #   https://drive.google.com/uc?export=download&id=1rDkiHCrhaf9eX7u7yjM1qwSuyEk-rPnt
 
-#Hint 4: Create a deal_card() function that uses the List below to *return* a random card. 11 is the Ace.
+#Hint 4: Create a deal_card() function that uses the List below to *return* a random card.
+#11 is the Ace.
 import random
 
 def deal_card():
     """returns a random card from the deck"""
-    set_cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-    card = random.choice(set_cards)
+    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+    card = random.choice(cards)
     return card
+
+def calculate_score(cards):
+    """take a list of cards and return the score calculated from the cards"""
+    if 11 in cards and 10 in cards and len(cards) > 21:
+        cards.remove(11)
+        cards.append(1)
+
+    return sum(cards)
 
 #Hint 5: Deal the user and computer 2 cards each using deal_card() and append().
 user_cards = []
 computer_cards = []
 
-for _ in range(2):
+for _ in range(2): #use _ because we don't need a variable really
+    # new_card = deal_card() #deal cards through the for loop
+    # user_cards.append(new_card)
     user_cards.append(deal_card())
     computer_cards.append(deal_card())
-    
-#Hint 6: Create a function called calculate_score() that takes a List of cards as input 
-#and returns the score. 
-#Look up the sum() function to help you do this.
 
-#Hint 7: Inside calculate_score() check for a blackjack (a hand with only 2 cards: ace + 10) and return 0 instead of the actual score. 0 will represent a blackjack in our game.
-
-#Hint 8: Inside calculate_score() check for an 11 (ace). If the score is already over 21, remove the 11 and replace it with a 1. You might need to look up append() and remove().
+user_score = calculate_score(user_cards)
+computer_score = calculate_score(computer_cards)
 
 #Hint 9: Call calculate_score(). If the computer or the user has a blackjack (0) or if the user's score is over 21, then the game ends.
+
 
 #Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
 
