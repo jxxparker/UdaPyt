@@ -22,7 +22,11 @@ def calculate_score():
 
     return sum(deck_cards)
 
-#Hint 9: Call calculate_score(). If the computer or the user has a blackjack (0) or if the user's score is over 21, then the game ends.
+user_score = calculate_score(user_cards)
+computer_score = calculate_score(computer_cards)
+
+print(f" your cards: {user_cards}, current score: {user_score}")
+print(f" computer's first card: {computer_cards[0]}")
 
 #Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
 
