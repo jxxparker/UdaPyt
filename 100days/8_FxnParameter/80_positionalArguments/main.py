@@ -1,7 +1,5 @@
-#functions with more than 1 input
-
 def greet_with(name, location):
     print(f"Hello {name}")
-    print(f"what is it like in {location}")
+    print("What is it like in location")
 
-greet_with(name="jihun", location="california")
+greet_with(name="Jihun", location="Los Angeles")
