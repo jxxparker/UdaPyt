@@ -1,9 +1,2 @@
- 
+#the term iterable means you can "iterate" over the object
 
-loc = 'bank'
-if loc == 'auto shop':
-    print('cars are cool')
-elif loc == 'bank':
-    print("You got bank")
-else:
-    print('i do not know much')
