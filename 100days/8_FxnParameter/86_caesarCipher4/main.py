@@ -21,8 +21,6 @@ def caesar(start_text, shift_amount, cipher_direction):
         else:
             end_text += char
 
-        
-    
-    print(f"the {cipher_direction} text is {end_text}")
+        print(f"the {cipher_direction} text is {end_text}")
 
 caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
