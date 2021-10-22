@@ -17,10 +17,29 @@
 -- ALTER TABLE sales
 -- DROP FOREIGN KEY sales_ibfk_1;
 
-DROP TABLE sales;
+-- DROP TABLE sales;
 
-DROP TABLE customers;
+-- DROP TABLE customers;
 
-DROP TABLE items;
+-- DROP TABLE items;       
+-- DROP TABLE
+--  companies;
 
-DROP TABLE companies;
+CREATE TABLE customers (
+	customer_id INT,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
+    email_address VARCHAR(255),
+    number_of_complaints INT,
+primary key (customer_id),
+);  
+
+
+
+
+
+
+
+
+
+
