@@ -3,7 +3,6 @@ from game_data import data
 import random
 import os
 
-
 def format_data(account):
     """format the account data into printable format."""
     account_name = account["name"]

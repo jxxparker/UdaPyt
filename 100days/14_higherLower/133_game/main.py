@@ -9,7 +9,7 @@ def get_random_account():
 
 def format_data(account):
   """Format account into printable format: name, description and country"""
-  name = account["name"]
+  name = account["name"] 
   description = account["description"]
   country = account["country"]
   # print(f'{name}: {account["follower_count"]}')
@@ -40,7 +40,7 @@ def game():
       account_b = get_random_account()
 
     print(f"Compare A: {format_data(account_a)}.")
-    print(vs)
+    print("---vs---")
     print(f"Against B: {format_data(account_b)}.")
     
     guess = input("Who has more followers? Type 'A' or 'B': ").lower()
