@@ -13,5 +13,5 @@ for question in question_data:
 quiz = QuizBrain(question_bank)
 quiz.next_question()
 
-while #if quiz still has questions remaining:
-    quiz.next_question()    
+# while #if quiz still has questions remaining:
+#     quiz.next_question()    
