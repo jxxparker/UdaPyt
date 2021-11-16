@@ -9,6 +9,13 @@ class QuizBrain:
         self.question_number = 0
         self.question_list = q_list
 
+    def still_has_questions(self):
+        # if self.question_number < len(self.question_list):
+        #     return True
+        # else:
+        #     return False
+        return self.question_number < len(self.question_list #same as above
+
     #create a method called next_question()
     #this needs to retrieve the item at the current question_number from the question_list.
     #use the input() fxn to show the user the Questin text and ask for the user's answer.
