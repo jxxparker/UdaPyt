@@ -7,7 +7,7 @@ for _ in range(4):
     tim(100)
     tim(90)
 
-
+ 
     
 
     

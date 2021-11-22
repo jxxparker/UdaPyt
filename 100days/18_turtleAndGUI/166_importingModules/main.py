@@ -1,15 +1,11 @@
-from turtle import Turtle, Screen
+# from turtle import Turtle
 
-tim = Turtle() #creating timmy the turtle from turtle
+# tim = Turtle()
+# tom = Turtle()
+# terry = Turtle()
 
+import turtle as t
+tim = t.Turtle()
 
-for _ in range(4):
-    tim(100)
-    tim(90)
-
-
-    
-
-    
-screen = Screen() #doesn't let screen exit, because without it it does.
-screen.exitonclick() 
+import heroes
+print(heroes.gen())
