@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Checkerboard page 1</title>
+    <style>
+      .color1 {
+        background-color: black;
+        width: 50px;
+        height: 50px;
+      }
+      .color2 {
+        background-color: red;
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      {% for x in range(0, rows): %}
+        {% if x % 2 !=0: %}
+          <tr>
+            {% for y in range(0, columns): %}
+              {% if y % 2 != 0: %}
+                <td class="color1"></td>
+              {% endif %}
+                {% if y % 2 ==0: %}
+                  <td class="color2"></td>
+                {% endif %}
+            {% endfor %}
+          </tr>
+        {% endif %}
+
+        {% if x % 2 == 0: %}
+          <tr>
+            {% for y in range(0, columns): %}
+              {% if y % 2 != 0: %}
+                <td class="color2"></td>
+              {% endif %}
+                {% if y % 2 ==0: %}
+                  <td class="color1"></td>
+                {% endif %}
+            {% endfor %}
+          </tr>
+        {% endif %}
+    {% endfor %}            
+      
+    </table>
+  </body>
+</html>

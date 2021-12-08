@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Checkerboard page 1</title>
+    <style>
+      .color1 {
+        background-color: black;
+        width: 50px;
+        height: 50px;
+      }
+      .color2 {
+        background-color: red;
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      {% for i in range(4): %}
+        <tr>
+            <td class="color1"></td>
+            <td class="color2"></td>
+            <td class="color1"></td>
+            <td class="color2"></td>
+            <td class="color1"></td>
+            <td class="color2"></td>
+            <td class="color1"></td>
+            <td class="color2"></td>
+        </tr>
+        <tr>
+            <td class="color2"></td>
+            <td class="color1"></td>
+            <td class="color2"></td>
+            <td class="color1"></td>
+            <td class="color2"></td>
+            <td class="color1"></td>
+            <td class="color2"></td>
+            <td class="color1"></td>
+        </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
