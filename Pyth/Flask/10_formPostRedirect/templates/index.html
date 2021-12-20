@@ -1,15 +1,19 @@
-<html>
-    <head>
-       <title>Form Test Index</title>
-    </head>
-    <body>
-      <h1>Index Page</h1>
-      <h3>Create a User</h3>
-      <!-- read on to learn about form actions, we'll talk about the method in a later section -->
-      <form action='/users' method='post'>
-          Name: <input type='text' name='name'>
-          Email: <input type='text' name='email'>
-          <input type='submit' value='create user'>
-      </form>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Post Request</title>
+  </head>
+  <body>
+    <form action="/users" method="post">
+      <div class="container">
+        <h1>Create a user</h1>
+        <p>Name: <input type="text" name="name" /></p>
+        <p>Email: <input type="text" name="email" /></p>
+        <input type="submit" value="create user" />
+      </div>
+    </form>
+  </body>
 </html>
