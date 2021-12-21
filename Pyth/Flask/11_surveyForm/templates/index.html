@@ -8,12 +8,11 @@
   </head>
   <body>
     <form action="/users" method="post">
-      <div class="container">
+      <div class="container" style="text-align: center;">
         <h1>Survey Form</h1>
         <p>Your Name: <input type="text" name="name" /></p>
-        <p>Number: <input type="number" name="email" /></p>
-        <p>
-          Dojo Locations:
+        <p>Number: <input type="text" name="number" /></p>
+        <p>Dojo Locations:
           <select name="location">
             <option value="San Jose">San Jose</option>
             <option value="Washington DC">Washington DC</option>
@@ -23,8 +22,9 @@
         </p>
         <p>Comment (optional):</p>
         <textarea name="comment"></textarea>
+        <p><input type="submit" value="Button"/></p>
       </div>
-      <input type="submit" value="Button" />
+      
     </form>
   </body>
 </html>
