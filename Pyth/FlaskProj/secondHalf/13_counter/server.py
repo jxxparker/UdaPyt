@@ -1,7 +1,6 @@
 from flask import Flask, redirect, render_template, request, session
 app = Flask(__name__)
 app.secret_key = "MySecretKey@!"
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
