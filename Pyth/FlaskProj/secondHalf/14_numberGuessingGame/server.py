@@ -1,9 +1,7 @@
-from flask import Flask, redirect, render_template, request, session
+from flask import Flask, render_template, request, redirect, session, url_for
+import random
 app = Flask(__name__)
-app.secret_key = "MySecretKey?!"
+app.secret_key = 'ThisIsSecret' # you need to set a secret key for security purposes
 
 
-
-
-if __name__=="__main__":
-    app.run(host="localhost", port=8000, debug=True)
+app.run(host="localhost", port=8000, debug=True)
