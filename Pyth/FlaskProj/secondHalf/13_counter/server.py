@@ -2,7 +2,6 @@ from flask import Flask, redirect, render_template, request, session
 app = Flask(__name__)
 app.secret_key = "MySecretKey?!"
 
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'GET':
