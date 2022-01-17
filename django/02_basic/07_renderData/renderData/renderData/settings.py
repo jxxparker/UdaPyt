@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$sh-nsa%u*ljktnw9=ey$f#u5o^n8n+o75i8nw2p@!h4zy^lue'
+SECRET_KEY = 'django-insecure-c03@bo33p-1oae$rmy#^7u!akk0gy06a=%f=#x(z1yr0b3ao7t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,7 +39,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'templatesProj.urls'
+ROOT_URLCONF = 'renderData.urls'
 
 TEMPLATES = [
     {
@@ -59,7 +59,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'templatesProj.wsgi.application'
+WSGI_APPLICATION = 'renderData.wsgi.application'
 
 
 # Database

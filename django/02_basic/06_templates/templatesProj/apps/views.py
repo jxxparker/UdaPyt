@@ -1,8 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def projects(request):
-    return HttpResponse("Projects page worked.")
+def index(request):
+    # return HttpResponse("Projects page worked.")
+    return render(request, "apps/index.html")
 
-def product(request, pk):
-    return HttpResponse("this page will work with whatever word after THIS" + " " + str(pk))
+def index2(request, pk):
+    # return HttpResponse("this page will work with whatever word after THIS" + " " + str(pk))
+    return render(request, "apps/index2.html")
+
+
+
+
