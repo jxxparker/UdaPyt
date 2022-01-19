@@ -23,8 +23,13 @@ def index(request):
     msg = "Hello, you are on the index 1 page. messagefrom views.py"
     page = "--page worked--"
     number = 10
-    context = {"page": page, "number": number}
+    context = {"page": page, "number": number, "projects": projectsList}
     return render(request, "apps/index.html", context)
     
 def index2(request, pk):
-    return render(request, "apps/index2.html")
+    projectObj = None
+    for i in projectsList:
+        if i['id'] == pk:
+            projectObj = i
+    return render(request, "apps/index2.html", {"project": projectObj})
+

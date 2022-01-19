@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index 1</title>
-</head>
-<body>
-    <p>Index 1 Page worked</p>
-    {% extends 'main.html' %}
-    
+  </head>
+  <body>
+    <p>Index Page outside block content</p>
+    {% extends 'main.html' %} 
     {% block content %}
-    
-    <p>Hello {page} worked {{ page }}</p>
 
+    <p>inside block content {{ page }}</p>
+    <!-- If loop worked  -->
     {% if number > 10 %}
-        <p>Number is greater than 10</p>
+    <p>Number is greater than 10</p>
     {% elif number == 10 %}
-        <p>Number is exactly 10</p>
+    <p>Number is exactly 10</p>
     {% else %}
-        <p>Number is less than 10</p>
+    <p>Number is less than 10</p>
     {% endif %}
+    <!-- If loop worked  -->
+    
+    <hr />
+    <h1>Projects after if loop</h1>
 
-    <hr>
-    <h1>Projects ###</h1>
-    
-    
+    <ul>
+      {% for project in projects %}
+      <li>Name: <a href="{% url 'index2' project.id %}">{{ project.title }}</a>
+         --- {{project.description}}</li>
+      {% endfor %}
+    </ul>
+
     {% endblock content %}
-
-
-
-</body>
+  </body>
 </html>

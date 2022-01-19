@@ -8,7 +8,12 @@
     
 </head>
 <body>
-    {% include 'navbar.html' %}
-    <p>index 2 page worked </p>
+    {% extends 'main.html' %}
+    {% block content %}
+    <br>
+    
+    <p>{{project.title}} --- {{project.description}}</p>
+    
+    {% endblock content %}
 </body>
 </html>

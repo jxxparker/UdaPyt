@@ -8,10 +8,10 @@
 </head>
 <body>
     {% include 'navbar.html' %}
-    <li>The Main Template</li>
+    <li>The Main Template outside of block content</li>
 
     {% block content %}
-    <li>testing</li>
+    <li>The Main Template inside block content</li>
     {% endblock content %}
 </body>
 </html>
