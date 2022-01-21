@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -8,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-8u=qf7b01-6yn1fqjo+7(lwi+2@c45=qm)g@u5)il2ijoer7xd'
+SECRET_KEY = 'django-insecure-#(9y^yt_f1gn_=xa2weqp#-n&a5pwp1%o6=g#s@7rgl7v_c%8r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -25,7 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.apps.AppsConfig',
+    'apps.apps.AppsConfig'
 ]
 
 MIDDLEWARE = [
@@ -38,7 +39,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'timeDisplay.urls'
+ROOT_URLCONF = 'modelsPanel.urls'
 
 TEMPLATES = [
     {
@@ -58,7 +59,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'timeDisplay.wsgi.application'
+WSGI_APPLICATION = 'modelsPanel.wsgi.application'
 
 
 # Database
