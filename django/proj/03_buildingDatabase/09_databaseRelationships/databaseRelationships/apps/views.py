@@ -1,4 +1,3 @@
-from re import I
 from django.shortcuts import render
 from django. http import HttpResponse
 
@@ -35,3 +34,4 @@ def project(request, pk):
         if i['id'] == pk:
             projectObj = i
     return render(request, "apps/project.html", {"project": projectObj})
+
