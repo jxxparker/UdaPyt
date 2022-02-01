@@ -1,42 +1,95 @@
 {% load static %}
+
 <!DOCTYPE html>
 <head>
     <title>Jihuns portfolio</title>
     <link href="{% static 'css/main.css'  %}" rel="stylesheet" type="text/css">
-    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 <body>
-    <div class="col-md-3">
-        <div class="card card-body h-100  border-info" id="profile-wrapper">
-            <h4>Jihun Park</h4>
-            <img src="{% static 'images/jihun.jpg' %}" >
-            <hr>
-            <h4>About Me</h4>
-            <p>I am a creative software developer who possesses a passion for desiging fully functional, yet elegant web applications using Python and Javascript.</p>
-        </div>
+    <br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card card-body h-60  border-info" id="profile-wrapper">
+					<img id="profile-pic" src="{% static 'images/jihun.jpg' %}" >
+					<hr>
+					<p style="font-weight: bold;">Jihun Park</p>
+					<p>"The most important thing is to try and inspire people so that they can be great in whatever they want to do" - Kobe Bryant</p>
+                    
+                </div>
+			</div>
 
-        <div class="card card-body h-100  border-info" id="profile-wrapper">
-            <div class="card card-body h-100  border-info">
-                <h4>My First Job as a Developer</h4>
+			<div class="col-md-9">
+				<div class="card card-body h-45  border-info">
+					<h4>About me</h4>
+					<hr>
+
+					<p>I am a self taught full stack developer who is passionate about writing fully functional, yet elegant web applications using Python and Javascript. I consider myself as lifelong learner and I am always willing to take on challenges to improve my skills and enhance my knowledge. Please don't hesitate to reach out to me.</p>
+                    </ul>
+
+				</div>
                 <hr>
-                <p>3 months after writing my first Hello World program on September 8th 2017 (While working in the marketing department) I had convinced my boss to let me take a stab at building a better version of the outdated laboratory management system my company was running on.</p>
+                <div class="card card-body h-45  border-info">
+					<h4>Reach me @</h4>
+					<hr>
 
-                <p>Before I knew it we transitioned from the old system and we're on to mine. My newbie self was now in charge of hosting hundreds of thousands of lab samples and supporting thousands of clients.</p>
+					<ul class="social-links">
+						<a href="https://www.instagram.com/jihunypark/"><img class="social" src="{% static 'images/insta.png' %}"></a>
+						<a href="https://www.linkedin.com/in/jihunjpark/"><img class="social" src="{% static 'images/linkedin.png' %}"></a>
+                        <a href="mailto:jihunpark1992@gmail.com"><img class="social" src="{% static 'images/email.png' %}"></a>
+                        <a href="https://github.com/jxxparker"><img class="social" src="{% static 'images/github.png' %}"></a>
+                    </ul>
 
-                <p>From this you’ll see that I’m someone that jumps before I can talk myself out of doing something scary.</p>
+				</div>
+                
+			</div>
+            
+		</div>
+		<br>
 
-                <ul class="social-links">
-                    <li><img class="social" src="{% static 'images/facebook.png' %}"></li>
-                    <li><img class="social" src="{% static 'images/linkedin.png' %}"></li>
-                    <li><img class="social" src="{% static 'images/twitter.png' %}"></li>
-                    <li><img class="social" src="{% static 'images/youtube.png' %}"></li>
-                </ul>
+        <div class="row">
+			<div class="col-md-6">
+				<div class="card card-body h-100">
+					<h5>My Experience as a Developer</h5>
+					<hr>
+					<p>Full stack developer at FOI laboratories.</p>
+					<p>Designed, built and managed a lab management system as a sole developer. System supported thousands of customers with a UI for Lab Admins and a customer dashboard.</p>
+					</div>
+			</div>
 
-            </div>
-        </div>
-    </div>
+			<div class="col-md-6">
+				<div class="card card-body h-100">
+					<h5>What I Know</h5>
+					<hr>
+					<p>Python, Django, HTML/CSS, JavaScript/Jquery, React, Postgres, AWS and APIs such as google maps, JavaScript charts and a whole bunch more I can’t possibly mention in one sentence! ;)</p>
+					<p>PS: Working on Node JS, Mongo DB and Machine Learning.</p>
+				</div>
+			</div>
+		</div>
+
+        <div class="row">
+			<div class="col-md-6">
+				<div class="card card-body h-100">
+					<h5>How I Learn</h5>
+					<hr>
+					<p>Reverse Engineer & Build Ugly Prototypes First.</p>
+
+					<p>I can learn just about anything by having a final product to tear apart piece by piece. I break the code where I need to figure out why things work the way they do. Documentation is just a reference.</p>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="card card-body h-100">
+					<h5>My Short Term Goals</h5>
+				<hr>
+				<p>After almost two years of supporting my system at the lab I’m ready to learn something new. I'll collaborating and sharing my experience with others on my blog (SayHelloWorld.co) & youtube channel.</p>
+				<p>Aside from building small projects I would love to enter a position where I can be part of a bigger team & learn from others with more experience than myself.</p>
+
+				</div>
+			</div>
+		</div>
 
 </body>
 </html>
