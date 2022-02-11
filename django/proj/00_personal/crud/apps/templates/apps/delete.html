@@ -6,10 +6,8 @@
     {% csrf_token %}
     <p>Are you sure you want to delete? "{{object}}"</p>
 
-    <a href="{% url 'projects' %}">Go Back</a>
+    <a href="{% url 'index' %}">Go Back</a>
     <input type="submit" value="Confirm" />
 </form>
-
-
 
 {% endblock %}
