@@ -2,44 +2,48 @@
 
 <!DOCTYPE html>
 <head>
-    <title>Jihuns contact list</title>
+    <title>Jihuns Portfolio Main</title>
     <link href="{% static 'css/main.css'  %}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 <body>
     <br>
-	<div class="container">
-		<div class="row">
-			 <div class="col-md-3">
-				<div class="card card-body h-60  border-info" id="profile-wrapper">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-3">
+                <div class="card card-body h-100  border-info" id="profile-wrapper">
                     <p style="font-weight: bold; text-align:center">Jihun Park</p>
-					<img id="profile-pic" src="{% static 'images/ghoney.png' %}" >
-                    <hr> 
-					<!-- <a style="text-align: center" href="/"><button type="button">Go Home</button></a> -->
+                    <img id="profile-pic" src="{% static 'images/ghoney.png' %}">
+                    <hr>
+                    <a style="text-align: center" href="/"><button type="button">Back To Main</button></a>
+                </div>
             </div>
-		</div>
-            
-		<div class="col-md-9">
-			<ul style="font-weight: bold; text-align:center" class="social-links">
-			<div class="card card-body h-45  border-info">
-				<p style="font-weight: bold;">Portfolio</p>
-				<hr>
-				<a style="text-align: center" href="/aboutme"><button type="button">About Me</button></a>
-				<hr>
-				<a style="text-align: center" href="/contactme"><button type="button">Contact Me</button></a>
-				<hr>
-				<a style="text-align: center" href="/blank"><button type="button">My Projects</button></a>
-				<hr>
-				<a style="text-align: center" href="/"><button type="button">Back To Main</button></a>
-			</ul>
-			</div>
-		
-		</div>
+
+            <div class="col-md-9">
+                <div class="card card-body h-100  border-info">
+                    <ul class="social-links">
+                        <h4>Jihun's Portfolio</h4>
+                        <hr>
+                        <p>Welcome to my Portfolio, thanks for visiting!</p>
+                        <p>Feel free to explore different pages to get to know more about me.</p>
+                        <hr>
+                        <hr>
+                        <a style="text-align: center" href="/aboutme"><button type="button">About Me</button></a>
+				        <hr>
+				        <a style="text-align: center" href="/contactme"><button type="button">Contact Me</button></a>
+				        <hr>
+				        <a style="text-align: center" href="/projects"><button type="button">My Projects</button></a>
+				        <hr>
+                    </ul>
+                </div>
+            </div>
+                
+        </div>
     </div>
-		<br>		
+    
+    
 </body>
 </html>
-
-<p style="font-size:8px">Copyright © 2022 Jihun Park</p>
-
+<p style="text-align:center; font-size:10px">Copyright © 2022 Jihun Park</p>

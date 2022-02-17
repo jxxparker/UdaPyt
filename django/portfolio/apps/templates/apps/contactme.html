@@ -2,47 +2,51 @@
 
 <!DOCTYPE html>
 <head>
-    <title>Jihuns contact list</title>
-    <link href="{% static 'css/main.css'  %}" rel="stylesheet" type="text/css">
+    <title>Jihuns Portfolio Contacts</title>
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 <body>
     <br>
-	<div class="container">
-		<div class="row">
-			 <div class="col-md-3">
-				<div class="card card-body h-60  border-info" id="profile-wrapper">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-3">
+                <div class="card card-body h-100  border-info" id="profile-wrapper">
                     <p style="font-weight: bold; text-align:center">Jihun Park</p>
-					<img id="profile-pic" src="{% static 'images/ghoney.png' %}" >
-                    <hr> 
-					<!-- <a style="text-align: center" href="/"><button type="button">Go Home</button></a> -->
+                    <img id="profile-pic" src="{% static 'images/ghoney.png' %}">
+                    <hr>
+                    <a style="text-align: center" href="/"><button type="button">Back To Main</button></a>
+                </div>
             </div>
-		</div>
-            
-		<div class="col-md-9">
-            <div class="card card-body h-45  border-info">
-                <ul style="font-weight: bold;" class="social-links">
-                <p style="font-weight: bold;">Let's Connect!</p>
-                <hr>
-                    <a href="https://www.linkedin.com/in/jihunjpark/"><img class="social" src="{% static 'images/linkedin.png' %}"></a>
-                    
-                    <a href="mailto:jihunpark1992@gmail.com"><img class="social" src="{% static 'images/email.png' %}"></a>
-                    
-                    <a href="https://github.com/jxxparker"><img class="social" src="{% static 'images/github.png' %}"></a>
-                    
-                    <a href="https://www.instagram.com/jihunypark/"><img class="social" src="{% static 'images/insta.png' %}"></a> 
 
-                   <hr> 
-					<a href="/"><button type="button">Back To Main</button></a>
-                </ul>
-
+            <div class="col-md-9">
+                <div class="card card-body h-100  border-info">
+                    <ul class="social-links">
+                        <h4>Reach me @ below!</h4>
+                        <hr>
+                        <hr>
+                        <p>I posted various personal social media platforms below. </p>
+                        <p>Don't hestitate to reach or connect with me! I am always open to network and opportunities.</p>
+                        <p> I am very INTJ, so reaching out to me first will be doing me a favor.😎</p>
+                        <hr>
+                        <hr>
+                        <a href="https://www.linkedin.com/in/jihunjpark/"><img class="social" src="{% static 'images/linkedin.png' %}"></a>
+			
+			            <a href="mailto:jihunpark1992@gmail.com"><img class="social" src="{% static 'images/email.png' %}"></a>
+			
+			            <a href="https://github.com/jxxparker"><img class="social" src="{% static 'images/github.png' %}"></a>
+			
+			            <a href="https://www.instagram.com/jihunypark/"><img class="social" src="{% static 'images/insta.png' %}"></a> 
+                    </ul>
+                </div>
             </div>
-            
-		</div>
+                
+        </div>
     </div>
-		<br>		
+    
+    
 </body>
 </html>
-
-<p style="font-size:8px">Copyright © 2022 Jihun Park</p>
+<p style="text-align:center; font-size:10px">Copyright © 2022 Jihun Park</p>

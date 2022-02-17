@@ -10,5 +10,7 @@ def aboutme(request):
 def contactme(request):
     return render(request, "apps/contactme.html")
 
-def blank(request):
-    return render(request, "apps/blank.html")
+def projects(request):
+    return render(request, "apps/projects.html")
+
+
