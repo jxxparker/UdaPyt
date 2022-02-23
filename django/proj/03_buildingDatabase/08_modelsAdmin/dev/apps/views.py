@@ -19,25 +19,16 @@ projectsList = [
     },
 ]
 
-def projects(request):
-    page = "this is page"        
+def index(request):
+    page = "projects"
+    msg = "Hello, you are on index page."
     number = 10
-    context = {"page": page, "number": number, 'projects': projectsList}
-    return render(request, 'apps/projects.html', context)
+    context = {"page" : page, "number" : number, "lists": projectsList}
+    return render(request, "apps/index.html", context)
 
-def singles(request, pk):
+def display(request, pk):
     projectObj = None
     for i in projectsList:
-        if i['id'] == pk:
+        if i["id"] == pk:
             projectObj = i
-    return render(request, "apps/singles.html", {"project": projectObj})
-
-
-def singles(request, pk):
-    projectObj = None
-    for i in projectsList:
-        if i['id'] == pk:
-            projectObj = i
-    return render(request, "apps/singles.html", {"project": projectObj})
-
-
+    return render(request, "apps/display.html", {"obj": projectObj})
