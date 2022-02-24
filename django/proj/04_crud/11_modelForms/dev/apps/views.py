@@ -1,37 +1,20 @@
-from multiprocessing import context
-from struct import pack_into
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Project
 from .forms import ProjectForm
 
-def projects(request):
-    # page = "this is page"        
-    # number = 10
+
+def index(request):
     projects = Project.objects.all()
-    # context = {"page": page, "number": number, 'projects': projectsList}
-    context = {"projects": projects}
-    return render(request, 'apps/projects.html', context)
+    context = {"lists": projects}
+    return render(request, "apps/index.html", context)
 
-def singles(request, pk):
-    # projectObj = None
-    # for i in projectsList:
-    #     if i['id'] == pk:
-    #         projectObj = i
-    # return render(request, "apps/singles.html", {"project": projectObj})
-
+def display(request, pk):
     projectObj = Project.objects.get(id=pk)
-    tags = projectObj.tags.all()
-    return render(request, "apps/singles.html", {"project": projectObj, "tags": tags})
+    return render(request, "apps/display.html", {"projectObj": projectObj})
 
-def createProject(request):
+def create(request):
     form = ProjectForm()
     context = {"form": form}
-    return render(request, "apps/project_form.html", context)
-
-
-
-
-
-
-
+    return render(request, "apps/crud.html", context)
+    
