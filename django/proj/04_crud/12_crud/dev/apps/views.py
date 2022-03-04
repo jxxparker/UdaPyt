@@ -15,6 +15,12 @@ def display(request, pk):
 
 def create(request):
     form = ProjectForm()
+
+    if request.method == "POST":
+        form = ProjectForm(request.POST)
+        if form.is_valid():
+            form.save()
+
     context = {"form": form}
     return render(request, "apps/crud.html", context)
     

@@ -11,7 +11,7 @@
     <br>
     <div class="container">
         <div class="row">
-
+            
             <div class="col-md-3">
                 <div class="card card-body h-100  border-info" id="profile-wrapper">
                     <p style="font-weight: bold; text-align:center">Jihun Park</p>
@@ -30,11 +30,11 @@
                         <p>Feel free to explore different pages to get to know more about me.</p>
                         <hr>
                         <hr>
-                        <a style="text-align: center" href="/aboutme"><button type="button">About Me</button></a>
+                        <a style="text-align: center" href="{% url 'aboutme' %}"><button type="button">About Me</button></a>
 				        <hr>
-				        <a style="text-align: center" href="/contactme"><button type="button">Contact Me</button></a>
+				        <a style="text-align: center" href="{% url 'contactme' %}"><button type="button">Contact Me</button></a>
 				        <hr>
-				        <a style="text-align: center" href="/projects"><button type="button">My Projects</button></a>
+				        <a style="text-align: center" href="{% url 'projects' %}"><button type="button">My Projects</button></a>
 				        <hr>
                     </ul>
                 </div>

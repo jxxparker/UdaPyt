@@ -10,7 +10,7 @@
     {% extends "main.html" %}
     {% block content %}
 
-    <form method="POST">
+    <form action="" method="POST">
         {% csrf_token %}
 
         {{form.as_p}}
