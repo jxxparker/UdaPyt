@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.utils.crypto import get_random_string
 import random
 
+
 def randomizers(request):
     if "random_count" not in request.session.keys():
         request.session["random_count"] = 0
