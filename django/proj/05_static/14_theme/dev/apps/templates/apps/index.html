@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Main Page</title>
+</head>
+<body>
+    {% extends "main.html" %}
+    {%  block content %}
+
+    <h1>Projects</h1>
+    <table>
+        <tr>
+            <!-- <th>ID</th> -->
+            <th>Project</th>
+            <th>Positive Votes</th>
+            <th>Votes Ratio</th>
+            <th>Created</th>
+            <th>View</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        {% for list in lists %}
+            <tr>
+                <!-- <td>{{list.id}}</td> -->
+                <td>{{list.title}}</td>
+                <td>{{list.vote_total}} %</td>
+                <td>{{list.vote_ratio}}</td>
+                <td>{{list.created}}</td>
+                <td><a href="{% url 'display' list.id %}">View</a></td>
+                <td><a href="{% url 'update' list.id %}">Edit</a></td>
+                <td><a href="{% url 'delete' list.id %}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+   
+    {% endblock content %}
+    
+</body>
+</html>
