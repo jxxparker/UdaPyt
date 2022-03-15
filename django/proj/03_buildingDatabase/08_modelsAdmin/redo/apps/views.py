@@ -19,8 +19,17 @@ projectsList = [
     },
 ]
 
+
 def index(request):
     page = "projects"
-    msg = "You are on index page"
+    msg = "Hello, you are on index page."
     number = 10
-    context = {""}
+    context = {"page" : page, "number" : number, "projectsList": projectsList}
+    return render(request, "apps/index.html", context)
+
+def display(request, pk):
+    projectObj = None
+    for i in projectsList:
+        if i["id"] == pk:
+            projectObj = i
+    return render(request, "apps/display.html", {"projectsList": projectObj})
