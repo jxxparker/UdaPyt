@@ -6,9 +6,13 @@
 <body>
     {% extends "main.html" %}
     {%  block content %}
-
     <h1>Index Page</h1>
-    <p>Project dummy text</p>
+    
+    <ul>
+        {% for lists in projectsList %}
+        <li><a href="{% url 'display' lists.id %}">{{lists.title}}</a> - - - {{lists.description}}</li>
+        {% endfor %}
+    </ul>
 
     {% endblock content %}
 

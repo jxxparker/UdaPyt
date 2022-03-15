@@ -3,5 +3,5 @@ from apps import views
 
 urlpatterns =[
     path("index/", views.index, name="index"),
-    path("project/<str:pk>", views.project, name="project")
+    path("display/<str:pk>", views.display, name="display")
 ]
