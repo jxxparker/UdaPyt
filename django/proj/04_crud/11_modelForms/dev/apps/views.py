@@ -3,7 +3,6 @@ from django.http import HttpResponse
 from .models import Project
 from .forms import ProjectForm
 
-
 def index(request):
     projects = Project.objects.all()
     context = {"lists": projects}
