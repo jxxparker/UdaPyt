@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}"> 
+    <title>Main Page</title>
+</head>
+<body>
+    <h1 style="text-align: center">Review Page</h1>
+    <img src="{% static 'images/logo.svg' %}"
+
+    <p style="text-align: center"><a href="{% url 'create' %}">Add Review</a></p>
+    <hr>
+    {% block content %}
+    {% endblock content %}
+    <hr>
+</body>
+</html>
