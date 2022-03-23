@@ -1,0 +1,3 @@
+ #linkedList, Big O
+
+ 
