@@ -5,7 +5,7 @@ from .forms import ProjectForm
 
 def index(request):
     projects = Project.objects.all()
-    context = {"lists": projects}
+    context = {"projects": projects}
     return render(request, "apps/index.html", context)
 
 def display(request, pk):
@@ -14,7 +14,6 @@ def display(request, pk):
 
 def create(request):
     form = ProjectForm()
-
     if request.method == "POST":
         form = ProjectForm(request.POST, request.FILES)
         if form.is_valid(): #checks if everything is valid
