@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.contrib.auth.forms import UserCreationForm
+from .forms import CustomUserCreationForm
 
 def loginUser(request):
     page = "login"
@@ -35,20 +35,27 @@ def logoutUser(request):
     return redirect("loginUser")
 
 
-def regisUser(request):
+def registerUser(request):
     page = "register"
-    form = UserCreationForm()
+    form = CustomUserCreationForm
 
     if request.method == "POST":
-        form = UserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
             user.username = user.username.lower()
+            user.save()
 
-    context = {"page": page, "form": form}
+            messages.success(request, "User account was created!")
+
+            login(request, user)
+            return redirect("profiles")
+        
+        else:
+            messages.success(request, "An error has occurred during registration")
+
+    context = {'page': page, 'form': form}
     return render(request, "users/loginReg.html", context)
-
-
 
 
 def profiles(request):
