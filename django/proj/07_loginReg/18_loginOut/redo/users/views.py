@@ -35,7 +35,7 @@ def loginUser(request):
 def logoutUser(request):
     logout(request)
     messages.error(request, "Username was logged out")
-    return redirect("login")
+    return redirect("loginUser")
 
 
 def profiles(request):

@@ -1,11 +1,14 @@
-from .models import Profile
-from django.contrib.auth.models import User 
 from django.shortcuts import render, redirect
+from .models import Profile
 from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.models import User 
 from django.contrib.auth.decorators import login_required
+#makes it required to view for certain profiles
 from django.contrib import messages
+#makes it so we can print messages in html pages
 
 def loginUser(request):
+    
     if request.user.is_authenticated:
         return redirect("profiles")
 
@@ -14,16 +17,18 @@ def loginUser(request):
         password = request.POST["password"]
 
         try:
-            user = User.objects.get(username=user)
+            user = User.objects.get(username=username)
         except:
-            messages.error(request, "Logged in")
+            messages.error(request, "Username does not exist")
 
         user = authenticate(request, username=username, password=password)
+        
         if user is not None:
             login(request, user)
             return redirect("profiles")
         else:
-            messages.error(request, "User doesn't exist")
+            messages.error(request, "Username OR password is incorrect")
+
     return render(request, 'users/loginReg.html')
 
 
