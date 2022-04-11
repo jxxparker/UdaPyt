@@ -20,3 +20,6 @@ Django Documentations Used on these projects
  -- form.save() : save method is called on the Django ModelForm instance in order to save the data to the database (SQLite3)
 
 
+15) Users App
+https://docs.djangoproject.com/en/4.0/ref/contrib/auth/
+
