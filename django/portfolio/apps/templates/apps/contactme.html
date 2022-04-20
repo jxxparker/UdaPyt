@@ -1,51 +1,67 @@
 {% load static %}
-
 <!DOCTYPE html>
 <head>
-    <title>Jihuns Portfolio Contacts</title>
-    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'uikit/styles/uikit.css' %}" />
+	<link rel="stylesheet" href="{% static 'styles/app.css' %}" />
+    <title>Contact Jihun</title>
 </head>
 <body>
-    <br>
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-3">
-                <div class="card card-body h-100  border-info" id="profile-wrapper">
-                    <p style="font-weight: bold; text-align:center">Jihun Park</p>
-                    <img id="profile-pic" src="{% static 'images/ghoney.png' %}">
-                    <hr>
-                    <a style="text-align: center" href="/"><button type="button">Back To Main</button></a>
+    <main class="profile my-md">
+        <div class="container">
+          <div class="layout">
+            <div class="column column--1of3">
+              <div class="card text-center">
+                <div class="card__body dev">
+                  <img class="avatar avatar--xl" src="{% static 'images/ghoney.png' %}"/>
+                  <h2 class="dev__name">Jihun Park</h2>
+                  <p class="dev__title">Software Developer</p>
+                  <p class="dev__location">📍 Chicago, IL</p>
+                  <br>
+                  <a href="{% url 'index' %}" class="btn btn--sub btn--lg">Back To Main</a>
+               
                 </div>
+              </div>
             </div>
+            <div class="column column--2of3">
+              <div class="devInfo">
+                <h3 class="devInfo__title">Contact Me / Reach me @</h3>
+                <p class="devInfo__about">
+                  <p>I posted various personal social media platforms below. </p>
+                  <hr>
+                  <p>Don't hestitate to reach or connect with me! I am always open to networking and pursuing new opportunities.</p>
+                  <hr>
+                  <p> I am very INTJ, so reaching out to me first will be doing me a favor.😎</p>
+                  <hr>
 
-            <div class="col-md-9">
-                <div class="card card-body h-100  border-info">
-                    <ul class="social-links">
-                        <h4>Reach me @ below!</h4>
-                        <hr>
-                        <hr>
-                        <p>I posted various personal social media platforms below. </p>
-                        <p>Don't hestitate to reach or connect with me! I am always open to network and opportunities.</p>
-                        <p> I am very INTJ, so reaching out to me first will be doing me a favor.😎</p>
-                        <hr>
-                        <hr>
-                        <a href="https://www.linkedin.com/in/jihunjpark/"><img class="social" src="{% static 'images/linkedin.png' %}"></a>
-			
-			            <a href="mailto:jihunpark1992@gmail.com"><img class="social" src="{% static 'images/email.png' %}"></a>
-			
-			            <a href="https://github.com/jxxparker"><img class="social" src="{% static 'images/github.png' %}"></a>
-			
-			            <a href="https://www.instagram.com/jihunypark/"><img class="social" src="{% static 'images/insta.png' %}"></a> 
-                    </ul>
-                </div>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                      <th scope="col">GitHub</th>
+                      <!-- <th scope="col">ID</th> -->
+                      <th scope="col">LinkedIn</th>
+                      <th scope="col">Instagram</th>
+                      <th scope="col">Email Me</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                      <td><a title="Github" href="https://github.com/jxxparker" target="_blank"><i class="im im-github"></i></a></td>
+                      <td><a title="LinkedIn" href="https://www.linkedin.com/in/jihunjpark/" target="_blank"><i class="im im-linkedin"></i></a></td>
+                      <td><a title="Instagram" href="https://www.instagram.com/jihunypark/" target="_blank"><i class="im im-instagram"></i></a></td>
+                      <td><a title="Email" href="mailto:jihunpark1992@gmail.com" target="_blank"><i class="im im-mail"></i></a></td>                  
+                      </tr>
+                    </tbody>
+                    </table>
+                  
+              </div>
+              
             </div>
-                
+          </div>
         </div>
-    </div>
-    
+      </main>
+
     
 </body>
 </html>

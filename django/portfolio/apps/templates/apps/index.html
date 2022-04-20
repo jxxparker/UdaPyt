@@ -1,48 +1,52 @@
 {% load static %}
-
 <!DOCTYPE html>
 <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'uikit/styles/uikit.css' %}" />
+	<link rel="stylesheet" href="{% static 'styles/app.css' %}" />
     <title>Jihuns Portfolio Main</title>
-    <link href="{% static 'css/main.css'  %}" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 </head>
 <body>
-    <br>
-    <div class="container">
-        <div class="row">
-            
-            <div class="col-md-3">
-                <div class="card card-body h-100  border-info" id="profile-wrapper">
-                    <p style="font-weight: bold; text-align:center">Jihun Park</p>
-                    <img id="profile-pic" src="{% static 'images/ghoney.png' %}">
+    <main class="profile my-md">
+        <div class="container">
+          <div class="layout">
+            <div class="column column--1of3">
+              <div class="card text-center">
+                <div class="card__body dev">
+                  <img class="avatar avatar--xl" src="{% static 'images/ghoney.png' %}"/>
+                  <h2 class="dev__name">Jihun Park</h2>
+                  <p class="dev__title">Software Developer</p>
+                  <p class="dev__location">📍 Chicago, IL</p>
+                  <br>
+                  <a href="{% url 'index' %}" class="btn btn--sub btn--lg">Back To Main</a>
+               
+                </div>
+              </div>
+            </div>
+            <div class="column column--2of3">
+              <div class="devInfo">
+                <h3 class="devInfo__title">Jihun's Portfolio</h3>
+                <p class="devInfo__about">
                     <hr>
-                    <a style="text-align: center" href="/"><button type="button">Back To Main</button></a>
-                </div>
-            </div>
+                    <p>Welcome to my Portfolio, thanks for visiting!</p>
+                    <p>Feel free to explore different pages to get to know more about me.</p>
 
-            <div class="col-md-9">
-                <div class="card card-body h-100  border-info">
-                    <ul class="social-links">
-                        <h4>Jihun's Portfolio</h4>
-                        <hr>
-                        <p>Welcome to my Portfolio, thanks for visiting!</p>
-                        <p>Feel free to explore different pages to get to know more about me.</p>
-                        <hr>
-                        <hr>
-                        <a style="text-align: center" href="{% url 'aboutme' %}"><button type="button">About Me</button></a>
-				        <hr>
-				        <a style="text-align: center" href="{% url 'contactme' %}"><button type="button">Contact Me</button></a>
-				        <hr>
-				        <a style="text-align: center" href="{% url 'projects' %}"><button type="button">My Projects</button></a>
-				        <hr>
-                    </ul>
-                </div>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                        <th scope="col"><a href="{% url 'aboutme' %}" class="dev__location">About Me</a></th>
+                        <th scope="col"><a href="{% url 'contactme' %}" class="dev__location">Contact Me</a></th>
+                        <th scope="col"><a href="{% url 'projects' %}" class="dev__location">My Projects</a></th>
+                        </tr>
+                      </thead>
+                      </table>          
+              </div>
+              
             </div>
-                
+          </div>
         </div>
-    </div>
-    
+      </main>
+
     
 </body>
 </html>

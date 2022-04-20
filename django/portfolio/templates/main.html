@@ -1,42 +1,22 @@
-{% load static %}
 
-<!DOCTYPE html>
-<head>
-    <title>Jihuns portfolio</title>
-    <link href="{% static 'css/main.css'  %}" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-</head>
-<body>
-    <br>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3">
-				<div class="card card-body h-60  border-info" id="profile-wrapper">
-					<img id="profile-pic" src="{% static 'images/jihun.jpg' %}" >
-					<hr>
-					<p style="font-weight: bold;">Jihun Park</p>
-					<p>"The most important thing is to try and inspire people so that they can be great in whatever they want to do" - Kobe Bryant</p>
-
-                    
-                </div>
-			</div>
+ <table class="table">
+	<thead>
+	  <tr>
+		<th scope="col">GitHub</th>
+		<!-- <th scope="col">ID</th> -->
+		<th scope="col">LinkedIn</th>
+		<th scope="col">Instagram</th>
+		<th scope="col">Email Me</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+		<td><a title="Github" href="https://github.com/jxxparker" target="_blank"><i class="im im-github"></i></a></td>
+		<td><a title="LinkedIn" href="https://www.linkedin.com/in/jihunjpark/" target="_blank"><i class="im im-linkedin"></i></a></td>
+		<td><a title="Instagram" href="https://www.instagram.com/jihunypark/" target="_blank"><i class="im im-instagram"></i></a></td>
+		<td><a title="Email" href="mailto:jihunpark1992@gmail.com" target="_blank"><i class="im im-mail"></i></a></td>                  
+	  </tr>
+	</tbody>
+  </table>
 
 
-
-
-			<div class="col-md-9">
-				<ul style="font-weight: bold; text-align:center" class="social-links"></ul>
-				<div class="card card-body h-45  border-info">
-					<h4 style="font-weight: bold; text-align:center">Porfolio</h4>
-					<hr>
-                    <!-- <p style="font-weight: bold; text-align:center">Jihun Park</p> -->
-					<a style="text-align: center" href="/aboutme"><button type="button">About Me</button></a>
-					<hr>
-					<a style="text-align: center" href="/contactme"><button type="button">Contact Me</button></a>
-					<hr>
-					<a style="text-align: center" href="/blank"><button type="button">My Projects</button></a>
-					<hr>
-					<a style="text-align: center" href="/"><button type="button">Back To Main</button></a>
-				</div>
-            </div>

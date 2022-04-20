@@ -23,3 +23,7 @@ Django Documentations Used on these projects
 15) Users App
 https://docs.djangoproject.com/en/4.0/ref/contrib/auth/
 
+
+
+17) Signals
+https://docs.djangoproject.com/en/4.0/topics/signals/
