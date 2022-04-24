@@ -11,14 +11,15 @@
     {% if page == 'register' %}
 
     <div class="auth">
+      
       <div class="card">
-        <div class="auth__header text-center">
-          <a href="/">
-            <img src="{% static 'images/icon.svg' %}" alt="icon" />
-          </a>
-          <h3>Register</h3>
-          <p>Create a new developer account a</p>
-        </div>
+          <div class="auth__header text-center">
+              <a href="/">
+                  <img src="{% static 'images/icon.svg' %}" alt="icon" />
+              </a>
+              <h3>Register an Account</h3>
+              <p>Create a new developer account</p>
+          </div>
 
         <form method="POST" action="{% url 'registerUser' %}" class="form auth__form">
           {% csrf_token %}
