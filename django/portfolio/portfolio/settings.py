@@ -14,8 +14,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-sa@8p5)6r0m=-*58juulqnzarx20dby(hev0o(#3ck=96j&ye8'
 DEBUG = True
 
-ALLOWED_HOSTS = ['jihun-portfolio.herokuapp.com', 'www.jihunypark.com']
-# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['jihun-portfolio.herokuapp.com', 'www.jihunypark.com']
+ALLOWED_HOSTS = []
 
 
 

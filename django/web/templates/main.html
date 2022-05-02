@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" />
+    <link rel="stylesheet" href="{% static 'uikit/styles/uikit.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/app.css' %}" />
+    <title>Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container container--narrow">
+            <nav class="header__nav">
+                <input type="checkbox" id="responsive-menu" />
+                <label for="responsive-menu" class="toggle-menu">
+                    <span>Menu</span>
+                    <div class="toggle-menu__lines"></div>
+                </label>
+
+                <ul class="header__menu">
+                    <li class="header__menuItem"><a href="{% url 'index' %}" class="btn btn--sub">Main Page</a></li>
+
+                    <li class="header__menuItem"><a href="{% url 'contactme' %}" class="btn btn--sub">Contact Me</a></li>
+
+                    <li class="header__menuItem"><a href="{% url 'projects' %}" class="btn btn--sub">Projects</a></li>
+                </ul>
+            </nav>
+
+         </div>
+        </header>
+
+            {% block content %}
+            {% endblock content %}
+
+</body>
+</html>
