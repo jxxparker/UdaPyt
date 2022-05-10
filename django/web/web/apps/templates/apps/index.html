@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JIHUN PARK</title>
+</head>
+<body>
+    {% extends 'main.html' %}
+    {% load static %} 
+    {% block content %}
+
+    <main class="profile my-md">
+        <div class="container">
+          <div class="layout">
+            <div class="column column--1of3">
+              <div class="card text-center">
+                <div class="card__body dev">
+                  <img class="avatar avatar--xl" src="{% static 'images/ghoney.png' %}"/>
+                  <h2 class="dev__name">Jihun Park</h2>
+                  <p class="dev__title">Software Developer</p>
+                  <p class="dev__location">📍 Chicago, IL</p>
+               
+                </div>
+              </div>
+            </div>
+
+            <div class="column column--2of3">
+              <div class="devInfo">
+                <h3 class="devInfo__title">About Me</h3>
+                <p class="devInfo__about">
+                    <hr>
+                    <p>My name is Jihun Park and if you reading this, that probably means you are somewhat interested in me. You are at the right place.</p>
+                    <h4>Career</h4>
+                    <p>First of all, I am a coding bootcamp graduate, however, I consider myself more of a self taught developer. From the moment I produced <strong>"Hello World"</strong> in the console, I knew I was hooked into the world of technology. I immediately became curious and excited for endless possibilities of what I can build potentially. Doing some research, I realized Python would be the language of my choice to write most of my codes in. This portfolio you are seeing is mostly built with <strong>Python with Django Framework</strong>. Most of my projects you will see are most likely written with Python and Javascript.</p>
+                    <h4>Hobbies</h4>
+                    <p>One of the things I priortize in life is <strong>health</strong>. I take fitness very seriously and I believe everyone should put in some exercise especially in 2022. I also love watching and playing basketball. Growing up, I was a huge NBA fan and I consider myself <strong>analytical/statistc</strong> junkie in sports. Another one of my hobbies is playing <strong>Chess</strong>. There was a point in time where I seriously considered becoming a professional chess player.</p>
+
+                    <h4>Goals in Life</h4>
+            
+                    <p>Just like most people, one of my goals is to reach financial freedom. One of my goals is to somehow make a difference in the world. I believe by always getting better at my craft, someday I can create a product that help people for the better.</p></p>
+              </div>
+              
+            </div>
+            
+     
+          </div>
+        </div>
+    </main>
+
+     
+
+      {% endblock content %}
+    
+</body>
+</html>
+<p style="text-align:center; font-size:10px">Copyright © 2022 Jihun Park</p>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Projects - JIHUN PARK</title>
+</head>
+<body>
+    {% extends 'main.html' %}
+    {% load static %} 
+    {% block content %}
+
+    <main class="projects">
+    <section class="hero-section text-center">
+      <div class="container container--narrow">
+        <div class="hero-section__box">
+          <h2><span>Personal Projects</span></h2>
+        </div>
+      </div>
+    </section>
+
+      <div class="container">
+        <div class="grid grid--three">
+
+        
+          <div class="column">
+            <div class="card project">
+              <a href="https://jihunsloginreg.herokuapp.com/" class="project">
+                <img class="project__thumbnail" src="{% static 'images/loginreg.png' %}" alt="project thumbnail"/>
+                <div class="card__body">
+                  <h3 class="project__title">Login Registration</h3>
+                  
+                  <p class="project--rating">
+                    <span style="font-weight: bold;">Login registration is a web application which allows you to register an account. With that account, you can log in and log out and see other people's profile and your own profile. 
+                  </p>
+                <p><a class="project__author" href="https://github.com/jxxparker/UdaPyt/tree/master/django/dojo/07_loginreg/loginreg">Github Link</a></p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+            <div class="column">
+                <div class="card project">
+                <a href="https://jihunscrud.herokuapp.com/" class="project">
+                <img class="project__thumbnail" src="{% static 'images/crud.png' %}" alt="project thumbnail"/>
+                <div class="card__body">
+                  <h3 class="project__title">C.R.U.D</h3>
+                  
+                  <p class="project--rating">
+                    <span style="font-weight: bold;">C.R.U.D Application is an application which allows you to put a review of public place of your choice. The application is created to demonstrate the logic of C.R.U.D(create, read, update and delete).
+                  </p>
+                <p><a class="project__author" href="https://github.com/jxxparker/UdaPyt/tree/master/django/dojo/06_crud">Github Link</a></p>
+                </div>
+              </a>
+            </div>
+        </div>
+
+
+          <div class="column">
+            <div class="card project">
+              <a href="https://jihunsgamblegame.herokuapp.com/" class="project">
+                <img class="project__thumbnail" src="{% static 'images/gambler.png' %}" alt="project thumbnail"/>
+                <div class="card__body">
+                  <h3 class="project__title">Gamble Game</h3>
+                  
+                  <p class="project--rating">
+                    <span style="font-weight: bold;">Gamble Game is a web application game allows you to bet your digital money. This game is completely free and no risk involved. This game is a fun way to get the benefit of getting the thrill of betting money at no 
+                  </p>
+                <p><a class="project__author" href="https://github.com/jxxparker/UdaPyt/tree/master/django/dojo/05_gambleGame/gambleGame">Github Link</a></p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card project">
+              <a href="https://jihunsplayground.herokuapp.com/" class="project">
+                <img class="project__thumbnail" src="{% static 'images/playground.png' %}" alt="project thumbnail"/>
+                <div class="card__body">
+                  <h3 class="project__title">Gamble Game</h3>
+                  
+                  <p class="project--rating">
+                    <span style="font-weight: bold;">Playground is a web application that lets you post any texts you want and lets you clear them when you want to. You can keep the site as it is if you want to save the texts you posted. It is a fun way to post whatever you want and delete them whenever you want. No judgement
+                  </p>
+                <p><a class="project__author" href="https://github.com/jxxparker/UdaPyt/tree/master/django/dojo/04_sessionWords/sessionwords">Github Link</a></p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card project">
+              <a href="https://jihunspassword.herokuapp.com/" class="project">
+                <img class="project__thumbnail" src="{% static 'images/password.png' %}" alt="project thumbnail"/>
+                <div class="card__body">
+                  <h3 class="project__title">Gamble Game</h3>
+                  
+                  <p class="project--rating">
+                    <span style="font-weight: bold;">Random Password Generator is an application which generates random strong password. Password includes upper and lower case letters and integers to show and create a strong password.
+                  </p>
+                <p><a class="project__author" href="https://github.com/jxxparker/UdaPyt/tree/master/django/dojo/02_randomWord/randomWord">Github Link</a></p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        
+
+        </div>
+      </div>
+    {% endblock content %}
+      </main>
+</body>
+</html>
