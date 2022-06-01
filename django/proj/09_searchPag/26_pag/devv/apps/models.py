@@ -17,6 +17,9 @@ class Project(models.Model):
 
     def __str__(self): ##this will show project name when you create it in admin
         return self.title
+    
+    class Meta:
+        ordering = ["created"] #orders by created date
 
 class Review(models.Model):
     VOTE_TYPE = (
