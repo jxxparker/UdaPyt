@@ -8,5 +8,6 @@ urlpatterns = [
 
     path("", views.profiles, name="profiles"),
     path("userProfile/<str:pk>", views.userProfile, name="userProfile"),
-    path("userAccount/", views.userAccount, name="userAccount")
+    path("userAccount/", views.userAccount, name="userAccount"),
+    path("editAccount/", views.editAccount, name="editAccount")
 ]
