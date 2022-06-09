@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    {% extends "main.html" %}
+    {%  block content %}
+
+    <h1>Projects</h1>
+    <ul>
+        {% for list in lists %}
+            <li><a href="{% url 'display' list.id %}">{{list.title}}</a> -- {{list.description}}</li>
+            
+        {% endfor %}
+    </ul>
+
+    {% endblock content %}
+    
+</body>
+</html>

@@ -51,6 +51,7 @@ function multiply() {
   currentResult *= enteredNumber;
   createAndWriteOutput('*', initialResult, enteredNumber);
   writeToLog("MULTIPLY", initialResult, enteredNumber, currentResult)
+  
 }
 
 
