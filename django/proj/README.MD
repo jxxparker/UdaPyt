@@ -5,25 +5,35 @@ Django Documentations Used on these projects
 - python3 manage.py createsuperuser : 
     this allows you to create super user so you can log in from localhost:8000/admin
 
+- python3 manage.py migrate :
+    migrate executes those sql commands in the database file
+
+What is Django Model?
+    -Django model is a built in feature that django uses to create tables, their fields, and various constraints. Django Models is the sql of database one uses with django.
+
+How to add models to your project application?
+    - Go to admin.py and put following code
+        from . models import "name of your models"
+        admin.site.register("name of your model")
+
+---------------------------------------------------------------------------------------------------
+
+09) Database Relationships
+
+- One to One : One table record can relate to one record in another table.
+- One to many : One table record can relate to many records in another table.
+- Many to many: This relationship occurs when multiple records in a table are associated with multiple records in another table. 
+
+What is Django ForeignKey?
+-ForeignKey is a django orm field to clumn mapping for creating and working with relationships between tables in relational database.
+
+on_delete=models.CASCADE = This allows someone to delete aka CASCADE.
+
+---------------------------------------------------------------------------------------------------
+
 10) Database Queries
-
--queryset = ModelName.objects.all()
-
-# ModelName = ModelName
-# objects. = model objects attrivute
-# .all() = method 
-    - other examples include .get(), .filter(), .exclude()
-
-11) Model Forms
- -- {{form.as_p}} : prints everything in form neated way.
- -- form.is_valid(): The form's data will be validated the first time either you call is_valid() or access errors
- -- form.save() : save method is called on the Django ModelForm instance in order to save the data to the database (SQLite3)
-
-
-15) Users App
-https://docs.djangoproject.com/en/4.0/ref/contrib/auth/
-
-
-
-17) Signals
-https://docs.djangoproject.com/en/4.0/topics/signals/
+queryset = ModelName.objects.all() 
+# queryset = variables that holds response
+# ModelName = Model Name
+# objects = Model objects attribute
+# .all() = Method : other examples [.get(), .filter(), .exclude()]
