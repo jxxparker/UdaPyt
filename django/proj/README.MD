@@ -37,3 +37,15 @@ queryset = ModelName.objects.all()
 # ModelName = Model Name
 # objects = Model objects attribute
 # .all() = Method : other examples [.get(), .filter(), .exclude()]
+
+---------------------------------------------------------------------------------------------------
+
+11) Model Forms
+
+Django has a {% csrf_token %} tag that is implemented to avoid malicious attacks. It generates a token on the server-side when rendering the page and makes sure to cross-check this token for any requests coming back in. If the incoming requests do not contain the token, they are not executed.
+
+Model Form : It is a class which is used to create an HTML form by using the Model. It is an efficient way to create a form without writing HTML code. Django automatically does it for us to reduce the application development time.
+
+how to use model form 
+from django.forms import ModelForm
+from .models import "name of your model"
