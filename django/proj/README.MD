@@ -49,3 +49,9 @@ Model Form : It is a class which is used to create an HTML form by using the Mod
 how to use model form 
 from django.forms import ModelForm
 from .models import "name of your model"
+
+--------------------------------------------------------------------------------------------------
+
+13) Static Files
+
+-python3 manage.py collectstatic
