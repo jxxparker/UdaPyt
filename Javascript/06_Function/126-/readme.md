@@ -1,1 +1,0 @@
-Method: storing a function in a property 
