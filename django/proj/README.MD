@@ -55,3 +55,14 @@ from .models import "name of your model"
 13) Static Files
 
 -python3 manage.py collectstatic
+
+--------------------------------------------------------------------------------------------------
+17) Signals
+
+from django.dispatch import receiver
+
+@receiver(post_save, sender=Profile)
+
+def ready(self):
+    import users.signals
+#need to import this in admin.py
