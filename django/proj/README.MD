@@ -66,3 +66,6 @@ from django.dispatch import receiver
 def ready(self):
     import users.signals
 #need to import this in admin.py
+
+--------------------------------------------------------------------------------------------------
+18) User Login, Logout and Flash messages
