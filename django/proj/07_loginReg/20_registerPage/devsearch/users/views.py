@@ -19,6 +19,7 @@ def loginUser(request):
             user = User.objects.get(username=username)
         except:
             messages.error(request, ' Username does not exist')
+            return redirect('login')
         
         user = authenticate(request, username=username, password=password)
 
@@ -32,7 +33,7 @@ def loginUser(request):
 
 def logoutUser(request):
     logout(request)
-    messages.error(request, 'User was logged out')
+    messages.info(request, 'User was logged out')
     return redirect('login')
 
 
