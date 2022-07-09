@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile Form</title>
+</head>
+<body>
+    {% extends 'main.html' %}
+    {% block content %}
+
+    <h1>Edit Account</h1>
+    <form method="POST" action="{% url 'edit_account' %}">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Submit" />
+    </form>
+
+    {% endblock content%}
+</body>
+</html>
