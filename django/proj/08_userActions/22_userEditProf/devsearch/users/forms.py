@@ -21,8 +21,6 @@ class CustomUserCreationForm(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
         super(CustomUserCreationForm, self).__init__(*args, **kwargs)
-        # self.fields['title'].widget.attrs.update({'class':'input'})
-        # self.fields['description'].widget.attrs.update({'class':'input'})
         for name, field in self.fields.items():
             field.widget.attrs.update({'class': 'input'})
 
@@ -30,4 +28,21 @@ class CustomUserCreationForm(UserCreationForm):
 class ProfileForm(ModelForm):
     class Meta:
         model = Profile
-        fields = '__all__'
+        fields = [
+            'name', 
+            'email', 
+            'username', 
+            'location', 
+            'bio', 
+            'short_intro', 
+            'profile_image',
+            'social_github',
+            'social_linkedin',
+            'social_instagram',
+            'social_website',
+            ]
+
+    def __init__(self, *args, **kwargs):
+        super(ProfileForm, self).__init__(*args, **kwargs)
+        for name, field in self.fields.items():
+            field.widget.attrs.update({'class': 'input'})

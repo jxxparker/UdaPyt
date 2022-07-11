@@ -23,6 +23,7 @@ def updateUser(sender, instance, created, **kwargs):
         user.first_name = profile.name
         user.username = profile.username
         user.email = profile.email
+        user.save()
 
 def deleteUser(sender, instance, **kwargs):
     user = instance.user
