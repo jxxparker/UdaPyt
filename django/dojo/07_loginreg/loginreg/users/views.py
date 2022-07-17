@@ -8,27 +8,28 @@ from .forms import CustomUserCreationForm, ProfileForm
 
 
 def loginUser(request):
-    page = "login"
+    page = 'login'
     if request.user.is_authenticated:
-        return redirect("profiles")
+        return redirect('profiles')
 
-
-    if request.method == "POST":
-        username = request.POST["username"]
-        password = request.POST["password"]
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
 
         try:
             user = User.objects.get(username=username)
+            
         except:
-            messages.error(request, "Username does not exist")
+            messages.error(request, ' Username does not exist')
+            return redirect('login')
 
         user = authenticate(request, username=username, password=password)
 
         if user is not None:
             login(request, user)
-            return redirect("profiles")
+            return redirect('profiles')
         else:
-            messages.error(request, "Username OR password is incorrect")
+            messages.error(request, ' Username or passward is incorrect')
 
     return render(request, "users/loginRegis.html")
 
@@ -59,7 +60,6 @@ def registerUser(request):
 
     context = {"page": page, "form": form}
     return render(request, "users/loginRegis.html", context)
-
 
 
 def profiles(request):
