@@ -36,3 +36,16 @@
 </body>
 
 </html>
+
+<script type="text/javascript">
+    //GET SEARCH FORM AND PAGE LINKS 
+    let searchForm = document.getElementById('searchForm')
+    let pageLinks = document.getElementsByClassName('page-link')
+
+    // ENSURE SEARCH FORM EXISTS
+    if(searchForm) {
+        for(let i=0; pageLinks.length > i; i++) {
+            pageLinks[i].addEventListener('click')
+        }
+    }
+</script>
