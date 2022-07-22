@@ -21,3 +21,8 @@
 - passwd
 - stdin: This option is used to indicate that passwd should read the new password from standard input, which can be a pipe.
 
+- ne vs != 
+    - ne: is used for integer comparison
+    != : is used for string comparison.
+
+echo "${?}" = exit status
