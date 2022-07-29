@@ -1,0 +1,11 @@
+#comment
+#comment
+#comment
+#comment
+#comment
+ip=192.123.123
+#comment
+#comment
+#comment
+color=blue
+number=5
