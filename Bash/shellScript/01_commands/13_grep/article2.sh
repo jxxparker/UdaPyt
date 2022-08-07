@@ -1,0 +1,13 @@
+#comment
+#comment
+#comment
+#comment
+#comment
+#comment
+#comment
+#comment
+ip=192.168.0.1
+#comment
+#comment
+#comment
+color=blue
