@@ -1,10 +1,5 @@
 2.15 ) Intro : What is a script?
     - Nothing more than a sequence of system commands pasted in a file.
-        - For Loops
-        - Conditional
-        - Variables
-        - Arguments
-        - ... more...?
 
 2.16 ) Invoking the Script
     - ls -l "filename" : shows only details about that specific file.
