@@ -9,3 +9,7 @@
         - If the command exits successfully, exit status will be 0, otherwise some non-zero value
         - We can exit a script using exit command
         
+    exit status range : 0 - 255
+                        256 -> 0
+                        257 -> 1
+                        258 -> 2

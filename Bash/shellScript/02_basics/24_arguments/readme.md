@@ -6,7 +6,7 @@
     ./arguments one two three
 
 
-$0 - script
+$0 - script name
 $1 - first argument
 $2 - second argument
 $n - nth argument

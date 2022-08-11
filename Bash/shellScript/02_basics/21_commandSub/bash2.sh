@@ -6,8 +6,8 @@ CURRENT_DIRECTORY=$(pwd)
 sleep 2 #sleep 2 seconds
 END=$(date +%s)
 
-#end time measurement
-DIFFERENCE=$(( END - START))
+# end time measurement 
+DIFFERENCE=$(( END - START ))
 
 echo
-echo Time elapsed: $DIFFERENCE seconds.
+echo Time elapsed: $DIFFERENCE

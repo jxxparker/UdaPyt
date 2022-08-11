@@ -10,7 +10,6 @@
         - PATH=/var/lib
         - DOGS_NUMBER=8
         - MESSAGE=hello
-        - MESSAGE=hello buddy
         - MESSAGE="hello buddy"
 
     2 : Access Variable
