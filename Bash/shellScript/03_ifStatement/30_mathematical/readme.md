@@ -9,6 +9,6 @@
     : -le : less than or equal to
 
 - Examples :
-- if [$VAR -eq 5]; then
-- if [$VAR -gt 7]; then
-- if [$VAR -eq 5] && [$COUNT -ne 1]; then
+- if [ $VAR -eq 5 ]; then
+- if [ $VAR -gt 7 ]; then
+- if [ $VAR -eq 5 ] && [ $COUNT -ne 1 ]; then

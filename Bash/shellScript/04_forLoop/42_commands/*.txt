@@ -1,0 +1,7 @@
+Sat Aug 13 15:15:49 CDT 2022
+  UID   PID  PPID   C STIME   TTY           TIME CMD
+    0     1     0   0 10:54AM ??         0:46.85 /sbin/launchd
+    0    96     1   0 10:54AM ??         0:21.47 /usr/libexec/logd
+    0    97     1   0 10:54AM ??         0:06.14 /usr/libexec/UserEventAgent (System)
+    0   100     1   0 10:54AM ??         0:00.47 /System/Library/PrivateFrameworks/Uninstall.framework/Resources/uninstalld
+======

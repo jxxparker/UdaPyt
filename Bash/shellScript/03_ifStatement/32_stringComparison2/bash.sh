@@ -1,9 +1,9 @@
 #!/bin/bash
 
 STR1="hello buddy"
-STR2="helalo buddy"
+STR2="hello buddy"
 
-if [[ "$STR1" = "$STR2" ]]; then
+if [[ $STR1 = $STR2 ]]; then
 # if [[ $STR1 = $STR2 ]]; then
     echo equal
 else

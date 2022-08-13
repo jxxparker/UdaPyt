@@ -28,11 +28,10 @@ mkdir -p $DESTINATION/$DATE
 cp $PROD/*.pdf $DESTINATION/$DATE
 
 # test exit status of copy command
-if [ $? -eq 0 ]; then   
+if [[ $? -eq 1 ]]; then   
     echo backup OK
 else
     echo backup failed
 fi
-
 
 

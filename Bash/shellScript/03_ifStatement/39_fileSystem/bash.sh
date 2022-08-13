@@ -14,31 +14,45 @@ fi
 
 #variable assignment
 FILE=$1
-# check if the file exists
-if [ -f $FILE ]; then
 
-    #default variables
+# check if the file exists
+if [[ -f $FILE ]]; then
+    # default variables
     VAR_READ="NO"
     VAR_WRITE="NO"
-    VAR_EXT=""
+    VAR_EXE="NO"
 
-    #CHECK IF FILE IS READABLE
-    if [ -r $FILE ]; then
+    # check if file is readable
+    if [[ -r $FILE ]]; then
         VAR_READ="YES"
     fi
 
     # check if file is writable
-    if [ -w $FILE ]; then
+    if [[ -w $FILE ]]; then
         VAR_WRITE="YES"
     fi
 
-    # check if file is executable
-    if [ -x $FILE ]; then
+    # check if file is executeable 
+    if [[ -x $FILE ]]; then
         VAR_EXE="YES"
     fi
 
-    #write permission summary to user
-    echo "READ: $VAR_READ"
+    # write permission summary to user
+    echo "=== FILE : $FILE ==="
+    echo "READ :    $VAR_READ"
+    echo "WRITE :   $VAR_WRITE"
+    echo "EXE :     $VAR_EXE"
+
+else
+    if [[ -d $FILE ]]; then
+        echo $FILE is a directory
+    else  
+        echo FILE : $FILE does not exists
+    fi
+fi
+
+
+
 
 
 
