@@ -16,14 +16,25 @@ from employees e
 where e.emp_no IN 
 ( SELECT dm.emp_no from dept_manager dm);
 
-SELECT dm.emp_no from dept_manager dm;
+SELECT dm.emp_no 
+from dept_manager dm;
 
 
 # 204 : Exercise
 select * from dept_manager; # emp_no, dept_no, from_date, to_date
 select * from employees; #emp_no, birth_date, first, last, gender, hire_date
 
-SELECT * FROM dept_manager 
+select * from dept_manager
 where emp_no IN 
-(SELECT emp_no FROM employees where hire_date between '1990-01-01' and '1995-01-01');
+( SELECT emp_no from employees where hire_date between '1990-01-01' AND '1995-01-01');
+
+
+
+
+
+
+
+
+
+
 

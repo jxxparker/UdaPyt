@@ -3,6 +3,7 @@
 # joins : the SQL tool that allow us to construct a relationship between objects
 
 # 167 : Exercise
+
 use employees;
 
 ALTER TABLE departments_dup

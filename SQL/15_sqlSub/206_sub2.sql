@@ -22,9 +22,8 @@ select * from titles;
 
 select * from employees e
 where exists
-(select * from titles t where t.emp_no = e.emp_no AND title = "Assistant Engineer");
-
-
+( select * from titles t where title = "Assistant Engineer")
+order by emp_no;
 
 
 
