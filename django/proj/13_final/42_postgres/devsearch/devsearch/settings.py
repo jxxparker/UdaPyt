@@ -116,13 +116,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'devsearch',
-        'USER': 'postgres',
-        'PASSWORD': 'ghoney',
-        'HOST': 'localhost',
+        'USER': 'ghoney',
+        'PASSWORD': 'gHONEY0120',
+        'HOST': 'database-1.cubts0tl57sb.us-east-2.rds.amazonaws.com',
         'PORT': '5432',
-
     }
 }
+
+
 
 # DATABASES = {
 #     'default': {
