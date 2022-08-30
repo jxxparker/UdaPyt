@@ -1,7 +1,6 @@
 from pathlib import Path
 from datetime import timedelta
 import os
-import smtplib
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -15,9 +14,7 @@ SECRET_KEY = 'django-insecure-qaca&e%*r5&vbi8_j9frrm(f4l$s%*yp8zk5yr!rt1#lm4ssim
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-# ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'ghoneysearch.herokuapp.com']
+ALLOWED_HOSTS = ['ghoneysearch.herokuapp.com']
 
 # Application definition
 
@@ -118,7 +115,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'devsearch',
         'USER': 'ghoney',
-        'PASSWORD': 'gHONEY0120',
+        'PASSWORD': '',
         'HOST': 'database-1.cubts0tl57sb.us-east-2.rds.amazonaws.com',
         'PORT': '5432',
     }
@@ -171,7 +168,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'jihunpark1992@gmail.com'
-EMAIL_HOST_PASSWORD = 'usodzefmvlfrgeop'
+EMAIL_HOST_PASSWORD = ''
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
@@ -192,7 +189,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 AWS_ACCESS_KEY_ID = 'AKIAVH5GVNIHT7VLI4MW'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_SECRET_ACCESS_KEY = ''
 AWS_STORAGE_BUCKET_NAME = 'devsearch-ghoney'
 
 AWS_QUERYSTRING_AUTH = False
