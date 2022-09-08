@@ -1,5 +1,5 @@
-from django.urls import path, include
-from projects import views
+from django.urls import path
+from . import views
 
 urlpatterns =[
     path("", views.projects, name="projects"),

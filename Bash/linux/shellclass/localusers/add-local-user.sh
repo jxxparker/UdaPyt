@@ -20,6 +20,8 @@ read -p "Enter the name of the person or application that will be using this acc
 
 # Get the password
 read -p "Enter the password to use for the account : " PASSWORD
+read -p "Enter the password to use for the account : " PASSWORD
+read -p "Enter the password to use for the account : " PASSWORD
 
 # Create the account.
 useradd -c "${COMMENT}" -m ${USER_NAME}
